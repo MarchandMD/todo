@@ -20,3 +20,5 @@ Monolithic CRUD functionality, with testing
 - Searchability
 - Select all; de-select all
 - UI improvements
+- Add additional fields to `items`
+- create a second object for User: one-to-many
