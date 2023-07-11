@@ -1,24 +1,22 @@
-# README
+# To-Do list
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## The requirements:
 
-Things you may want to cover:
+- As a user, I want to, add an item to my to do list
+- As a user, I want to, remove an item from my to do list
+- As a user, I want to update an item on my to do list
+- As a user, I want to make an item on my to do list as complete
+- As as user, I want make a previously completed item, not complete, on my to do list
 
-* Ruby version
+## Approach:
 
-* System dependencies
+Monolithic CRUD functionality, with testing
 
-* Configuration
+## Possible stretch goals:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- React or Vite FE
+- Coverage reports
+- Documentation
+- Searchability
+- Select all; de-select all
+- UI improvements
