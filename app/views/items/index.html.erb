@@ -1,2 +1,30 @@
-<h1>Item#index</h1>
-<p>Find me in app/views/item/index.html.erb</p>
+<div class="row justify-content-center p-3">
+  <div class="col-sm-2">
+    <h1>Items To Do</h1>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-sm-2">
+    <%= link_to 'add item', "/items/new", class: 'btn btn-primary' %>
+  </div>
+</div>
+<div class="row justify-content-center p-3">
+  <div class="col-sm-4">
+    <table class="table table-sm">
+      <tr>
+        <th>item description</th>
+        <th>item status</th>
+        <th> </th>
+        <th> </th>
+      </tr>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.description %></td>
+          <td><%= item.status %></td>
+          <td>update</td>
+          <td>delete</td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
