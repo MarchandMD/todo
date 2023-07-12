@@ -19,7 +19,6 @@ Monolithic CRUD functionality, with testing
 ## Possible stretch goals:
 
 -   React or Vite FE
--   Coverage reports
 -   Documentation/readme for usage
 -   Searchability
 -   Select all; de-select all
