@@ -10,6 +10,10 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
   def create
     @item = Item.new(items_params)
 
@@ -21,6 +25,10 @@ class ItemsController < ApplicationController
   end
 
   def update
+    @item = Item.find(params[:id])
+    @item.update(items_params)
+
+    redirect_to root_path
   end
 
   def destroy
@@ -33,6 +41,6 @@ class ItemsController < ApplicationController
   private
 
   def items_params
-    params.permit(:id, :description, :status)
+    params.require(:item).permit(:id, :description, :status)
   end
 end
