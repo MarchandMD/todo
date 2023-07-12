@@ -1,6 +1,10 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = if params.include? :search
+               Item.partial_match(params[:search])
+             else
+               Item.all
+             end
   end
 
   def show
