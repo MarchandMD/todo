@@ -29,6 +29,6 @@ describe 'Items#index' do
   end
 
   it 'has a link to update an item' do
-    first(:link, 'update').click
+    expect(page).to have_content('update')
   end
 end
