@@ -25,4 +25,12 @@ describe 'Items#index' do
     click_link('add item')
     expect(page).to have_content("Add an item")
   end
+
+  it 'has a link to delete an item' do
+    visit "/"
+    expect(page).to have_content(@item1.description)
+    first(:link, 'delete').click
+    expect(current_path).to eq("/")
+    expect(page).not_to have_content(@item1.description)
+  end
 end
