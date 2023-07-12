@@ -23,12 +23,16 @@ class ItemsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+
+    redirect_to root_path
   end
 
   private
 
   def items_params
-    params.permit(:description)
+    params.permit(:id, :description, :status)
   end
 end

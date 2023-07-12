@@ -22,7 +22,7 @@
           <td><%= item.description %></td>
           <td><%= item.status %></td>
           <td>update</td>
-          <td><%= link_to 'delete', skate_path(skate), method: :delete, data: {confirm: 'are you sure?'} %></td>
+          <td><%= link_to 'delete', items_path(id: item), method: :delete, data: {confirm: 'are you sure?'} %></td>
         </tr>
       <% end %>
     </table>
