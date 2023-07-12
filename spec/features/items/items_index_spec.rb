@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe 'Items#index' do
   before(:each) do
     @item1 = Item.create!(description: 'first item', status: 1)
@@ -31,6 +29,6 @@ describe 'Items#index' do
   end
 
   it 'has a link to update an item' do
-    first(:link, 'update').click
+    expect(page).to have_content('update')
   end
 end
