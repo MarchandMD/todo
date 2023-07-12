@@ -8,7 +8,7 @@
       </p>
       <p>
         <%= form.label :status %><br>
-        <%= form.select :status, [0, 1, 2] %>
+        <%= form.select :status, [['completed', 0], ['to do', 1], ['in progress',2]] %>
       </p>
       <p>
         <%= form.submit %>
