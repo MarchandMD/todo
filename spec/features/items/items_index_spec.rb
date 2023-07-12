@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe 'Items#index' do
   before(:each) do
     @item1 = Item.create!(description: 'first item', status: 1)

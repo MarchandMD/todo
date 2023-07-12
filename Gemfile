@@ -64,3 +64,5 @@ gem "capybara", "~> 3.39", group: :test
 gem "net-http", "~> 0.3.2"
 
 gem "simplecov", "~> 0.22.0", group: :test
+
+gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
