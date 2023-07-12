@@ -4,10 +4,11 @@ describe 'Items#update' do
   end
 
   it 'updates an item' do
+    @item = Item.first
     visit "/"
     expect(page).to have_content('update')
     first(:link, 'update').click
-    expect(current_path).to eq(edit_items_path)
+    expect(current_path).to eq(edit_item_path(@item))
     expect(page).to have_content('Edit item')
     expect(page).to have_content('Description')
     expect(page).to have_field('item_description')

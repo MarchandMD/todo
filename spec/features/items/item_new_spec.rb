@@ -6,7 +6,7 @@ describe 'Items#new' do
     visit "/"
     expect(page).to have_content('add item')
     click_on('add item')
-    expect(current_path).to eq(new_items_path)
+    expect(current_path).to eq(new_item_path)
     expect(page).to have_field('item_description')
     fill_in 'item_description', with: 'A new task to do'
     click_on('Add Item')
