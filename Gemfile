@@ -62,3 +62,5 @@ gem "bootstrap", "~> 5.2"
 gem "capybara", "~> 3.39", group: :test
 
 gem "net-http", "~> 0.3.2"
+
+gem "simplecov", "~> 0.22.0", group: :test
