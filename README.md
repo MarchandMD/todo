@@ -19,12 +19,13 @@ Monolithic CRUD functionality, with testing
 ## Possible stretch goals:
 
 -   React or Vite FE
+-   ~~Coverage reports~~
 -   Documentation/readme for usage
--   Searchability
+-   ~~Searchability~~
 -   Select all; de-select all
 -   UI improvements
 -   Add additional fields to `items`
 -   create a second object for User: one-to-many
 
 ## Refactor opportunities:
-- there's a bug somewhere preventing the use of `model:` argument in the `form_with` parameters; troubleshoot inconsistency, either with name of the model, resource, route, etc....
+- ~~there's a bug somewhere preventing the use of `model:` argument in the `form_with` parameters; troubleshoot inconsistency, either with name of the model, resource, route, etc....~~
