@@ -65,8 +65,10 @@ gem "net-http", "~> 0.3.2"
 
 gem "simplecov", "~> 0.22.0", group: :test
 
-gem "factory_bot_rails", "~> 6.2", :groups => [:development, :test]
+gem "factory_bot_rails", "~> 6.2", groups: %i[development test]
 
-gem "faker", "~> 3.2", :groups => [:test, :development]
+gem "faker", "~> 3.2", groups: %i[test development]
 
 gem "database_cleaner", "~> 2.0"
+
+gem "shoulda-matchers", "~> 5.3", group: :test
