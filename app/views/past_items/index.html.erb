@@ -1,2 +1,30 @@
-<h1>PastItems#index</h1>
-<p>Find me in app/views/past_items/index.html.erb</p>
+<div class="row justify-content-center p-3">
+  <div class="col-sm-4">
+    <h1>Past Items</h1>
+  </div>
+</div>
+<div class="row justify-content-center">
+  search field
+</div>
+<div class="row justify-content-center p-3">
+  <div class="col-sm-6">
+    <table class="table table-sm">
+      <tr>
+        <th>item description</th>
+        <th><%= link_to "Status", sort: "status" %></th>
+        <th>date created</th>
+        <th> </th>
+        <th> </th>
+      </tr>
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.description %></td>
+          <td><%= item.status %></td>
+          <td><%= item.created_at.strftime('%m/%d/%Y') %></td>
+          <td><%= link_to 'update', edit_item_path(id: item)  %></td>
+          <td><%= link_to 'delete', item_path(id: item), method: :delete, data: {confirm: 'are you sure?'} %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
