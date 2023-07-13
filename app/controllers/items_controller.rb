@@ -2,6 +2,8 @@ class ItemsController < ApplicationController
   def index
     @items = if params.include? :search
                Item.partial_match(params[:search])
+             elsif params.include? :sort
+               Item.order(params[:sort])
              else
                Item.all
              end
