@@ -1,18 +1,20 @@
 <div class="row justify-content-center p-3">
-  <div class="col-sm-2">
+  <div class="col-sm-4">
     <h1>Items To Do</h1>
   </div>
 </div>
 <div class="row justify-content-center">
-  <div class="col-sm-2">
-    <%= link_to 'add item', "/items/new", class: 'btn btn-primary' %>
-    <%= link_to 'past items', past_items_path, class: 'btn btn-primary' %>
-    <%= form_tag("/items", method: :get) do %>
-      <p> Search for an item </p>
-      <%= text_field_tag(:search, params[:search], placeholder: 'description') %>
-      <%= submit_tag ("Search") %>
-      <%= link_to ("clear") %>
-    <% end %>
+  <div class="col-sm-6">
+    <div class="d-flex justify-content-around">
+      <%= link_to 'add item', "/items/new", class: 'btn btn-success' %>
+    </div>
+    <div class="d-flex justify-content-around mt-3">
+      <%= form_tag("/items", method: :get) do %>
+        <%= text_field_tag(:search, params[:search], placeholder: 'search description') %>
+        <%= submit_tag ("Search") %>
+        <%= link_to ("clear") %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="row justify-content-center p-3">
