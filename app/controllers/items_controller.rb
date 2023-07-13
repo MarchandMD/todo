@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
              elsif params.include? :sort
                Item.order(params[:sort])
              else
-               Item.all
+               Item.where(created_at: Time.current.all_day)
              end
   end
 
