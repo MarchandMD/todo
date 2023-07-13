@@ -12,7 +12,7 @@ RSpec.describe Item, type: :model do
 
     it 'has @description and @status' do
       expect(item.description).to eq('the first item')
-      expect(item.status).to eq(1)
+      expect(item.status).to eq('to do')
     end
   end
 end
