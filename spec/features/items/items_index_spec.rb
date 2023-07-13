@@ -17,6 +17,7 @@ describe 'Items#index' do
       click_link('add item')
       expect(current_path).to eq('/items/new')
     end
+
     it 'has a link to delete an item' do
       expect(page).to have_content(@item1.description)
       first(:link, 'delete').click
@@ -26,6 +27,10 @@ describe 'Items#index' do
 
     it 'has a link to update an item' do
       expect(page).to have_content('update')
+    end
+
+    it 'has a link to view past items' do
+      expect(page).to have_link('past items')
     end
   end
 
