@@ -2,6 +2,8 @@
 
 ## Usage:
 
+fully deployed at: https://mm-todo-53860c89b6fc.herokuapp.com/
+
 1. `git clone <this repo>`
 2. cd into the new `todo` repo
 3. `bundle`
