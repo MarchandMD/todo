@@ -30,7 +30,7 @@ describe 'Items#index' do
     end
 
     it 'has a link to view past items' do
-      expect(page).to have_link('past items')
+      expect(page).to have_link('Past Items')
     end
   end
 
