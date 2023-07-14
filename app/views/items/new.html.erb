@@ -3,10 +3,22 @@
     <h1>Add an item</h1>
   </div>
 </div>
-
 <div class="row">
   <div class="col">
     <%= form_with(url: "/items",scope: :item, method: :post, local: true) do |form| %>
+      <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@item.errors.count, "error") %> prohibited
+            this article from being saved:
+          </h2>
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
       <div class="d-flex justify-content-center">
         <%= form.label(:description, "Description") %>
         <%= form.text_field :description %>
