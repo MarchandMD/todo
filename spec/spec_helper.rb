@@ -21,7 +21,6 @@ DatabaseCleaner.strategy = :truncation
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-
   config.before(:all) do
     DatabaseCleaner.clean
   end
